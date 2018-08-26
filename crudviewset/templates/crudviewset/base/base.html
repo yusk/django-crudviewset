@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+</head>
+<body>
+  {% block header %}
+    {{ header }}
+    <header>
+      {% include 'crudviewset/base/header.html' %}
+    </header>
+  {% endblock %}
+
+  {% block main %}
+    {{ main }}
+    <main>
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </main>
+  {% endblock %}
+
+  {% block footer %}
+   {{ footer }}
+    <footer>
+      {% include 'crudviewset/base/footer.html' %}
+    </footer>
+  {% endblock %}
+</body>
+</html>

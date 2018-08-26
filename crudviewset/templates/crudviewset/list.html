@@ -1,0 +1,8 @@
+{% extends "crudviewset/base/base.html" %}
+
+{% block content %}
+<h1>list</h1>
+{% for object in object_list %}
+<p>{{ object }}</p>
+{% endfor %}
+{% endblock content %}
