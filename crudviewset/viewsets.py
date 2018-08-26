@@ -54,18 +54,19 @@ class CRUDViewSet:
             variables['template_name'] = DEFAULT_TEMPLATE_VIEWS[vp.role]
 
         # クラスを作成
+        class_name = '%sView' % route_name.capitalize()
         setattr(
             self,
-            base_class.__name__,
+            class_name,
             type(
-                'CRUD%sView' % route_name.capitalize(),
+                class_name,
                 tuple(superclasses),
                 variables
             )
         )
-        self.urlpattern_dict[route_name] = path(
+        self.urlpattern_dict[class_name] = path(
             route,
-            getattr(self, base_class.__name__).as_view(),
+            getattr(self, class_name).as_view(),
             name=route_name
         )
 

@@ -231,3 +231,4 @@ pip-selfcheck.json
 build/
 dist/
 django_crudviewset.egg-info/
+local/

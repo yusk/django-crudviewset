@@ -9,10 +9,10 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-crudviewset',
-    version='0.1.0',
+    version='0.1.2',
     packages=find_packages(),
     include_package_data=True,
-    license='BSD License',
+    license='MIT License',
     description='Django CRUDViewSet',
     long_description=README,
     long_description_content_type="text/markdown",
@@ -27,7 +27,7 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
